@@ -1,0 +1,15 @@
+type Person {
+  id: Int!
+  name: String!
+  age: Int!
+}
+
+type Query {
+  people: [Person]!
+  person(id: Int!): Person
+}
+
+type Mutation {
+  addPerson(name: String!, age: Int!): Person!,
+  deletePerson(id: Int!): Boolean!
+}
